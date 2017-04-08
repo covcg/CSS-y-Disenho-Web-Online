@@ -105,11 +105,30 @@ nav a.active, nav a:active {
 
 
 
+img {
+  width: 100%;
+}
 
+.secondary img {
+  border: 2px solid black;
+}
 
+section {
+  display: flex;
+  background: #d5c75f;
+}
 
+section.main {
+  background: #82c3a6;
+}
 
+section.secondary {
+  border: 1px solid black;
+}
 
+section figure {
+  margin: 1em;
+}
 
 
 
@@ -117,12 +136,11 @@ footer {
   background: #C6d5c5;
   border-radius: 0 0 10px 10px;
   padding: 1em;
-  overflow: hidden;
+  display: flex;
 }
 
-footer address, footer article {
-  float: left;
-  width: 25%;
+footer article {
+  flex-grow: 1000;
 }
 
 footer h2, footer a, footer p {
