@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?pscf70');
+  src:  url('../fonts/icomoon.eot?pscf70#iefix') format('embedded-opentype'),
+  url('../fonts/icomoon.ttf?pscf70') format('truetype'),
+  url('../fonts/icomoon.woff?pscf70') format('woff'),
+  url('../fonts/icomoon.svg?pscf70#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]::before, [class*=" icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0 .25em 0 0;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.icon-facebook:before {
+  content: "\ea90";
+  color: #3B5998;
+}
+.icon-instagram:before {
+  content: "\ea92";
+  color: #8a3ab9;
+}
+.icon-twitter:before {
+  content: "\ea96";
+  color: #4099FF;
+}
+
+
+
+
+* {
+  font-family: 'Dancing Script', sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  margin: 0 10%;
+  background: black;
+}
+
+
+
+
+
+
+
+header {
+  background: #5b7989;
+  padding:  0 2em;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  color: white;
+}
+
+h1 {
+  flex-grow: 1;
+  text-align: left;
+  font-size: 2em;
+  text-shadow: 2px 2px 0 #02010a;
+  padding: .5em;
+}
+nav {
+  flex-grow: 1;
+  text-align: right;
+  padding: 1.5em 0;
+}
+
+nav a {
+  font-size: 1.5em;
+  padding: .5em;
+}
+
+nav a, nav a:active, nav a:visited {
+  color: white;
+  text-shadow: 0 0 .125em black;
+}
+
+nav a:hover {
+  text-shadow: 0 0 .25em black;
+}
+
+nav a.active, nav a:active {
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+  background: #C6d5c5;
+  border-radius: 0 0 10px 10px;
+  padding: 1em;
+  overflow: hidden;
+}
+
+footer address, footer article {
+  float: left;
+  width: 25%;
+}
+
+footer h2, footer a, footer p {
+  margin: 0 .5em;
+}
+
+footer h2 {
+  font-size: 2em;
+}
+
+footer p, footer a {
+  font-size: 1.2em;
+}
+
+footer a {
+  display: block;
+  color: black;
+}
+
+footer p, footer a {
+  padding: 0;
+}
