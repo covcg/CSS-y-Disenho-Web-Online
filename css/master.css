@@ -41,9 +41,6 @@
   color: #4099FF;
 }
 
-
-
-
 * {
   font-family: 'Dancing Script', sans-serif;
   margin: 0;
@@ -54,13 +51,8 @@
 body {
   margin: 0 10%;
   background: black;
+  animation: init 1s;
 }
-
-
-
-
-
-
 
 header {
   background: #5b7989;
@@ -102,53 +94,93 @@ nav a.active, nav a:active {
   text-decoration: none;
 }
 
-
-
-
 img {
   width: 100%;
+  box-shadow: 2px 2px 0 black;
 }
 
-.secondary img {
-  border: 2px solid black;
-}
-
-section {
-  display: flex;
-  background: #d5c75f;
-}
-
-section.main {
+.primary {
   background: #82c3a6;
+  padding: 2em;
 }
 
-section.secondary {
-  border: 1px solid black;
-}
-
-section figure {
-  margin: 1em;
-}
-
-
-
-footer {
-  background: #C6d5c5;
-  border-radius: 0 0 10px 10px;
+.secondary {
   padding: 1em;
   display: flex;
 }
 
-footer article {
-  flex-grow: 1000;
+.secondary figure {
+  padding: 1em;
 }
 
-footer h2, footer a, footer p {
-  margin: 0 .5em;
+.secondary img {
+  border: 1px solid black;
+  transition: 1s;
+}
+
+.secondary figure:first-of-type img:hover {
+  transform: rotate(10deg);
+}
+
+.secondary figure:last-of-type img:hover {
+  transform: translate(20px,-2px);
+}
+
+.secondary figcaption {
+  text-align: center;
+}
+
+.secondary a {
+  color: black;
+  font-size: 1.5em;
+}
+
+.photo-grid, .secondary {
+  background: #d5c75f;
+}
+
+.photo-grid {
+  overflow: hidden;
+  padding: 1em;
+}
+
+.photo-grid figure {
+  float: left;
+  width: 30%;
+  padding: 1em 1.66666%;
+}
+
+.photo-grid img {
+}
+
+.photo-grid figure:nth-of-type(1) {
+  filter: blur(10px);
+}
+
+.photo-grid figure:nth-of-type(2n) {
+  filter: grayscale(100%);
+}
+
+.photo-grid figure:nth-of-type(3) {
+  filter: sepia(90%);
+}
+
+footer {
+  background: #C6d5c5;
+  border-radius: 0 0 10px 10px;
+  padding: 0 1em 1em 1em;
+  overflow: hidden;
+}
+
+footer article {
+  width: 23%;
+  padding: 0 1%;
+  float: left;
 }
 
 footer h2 {
   font-size: 2em;
+  padding: 1em 0 0 0;
 }
 
 footer p, footer a {
@@ -160,6 +192,49 @@ footer a {
   color: black;
 }
 
-footer p, footer a {
-  padding: 0;
+@media (max-width: 1080px) {
+  .photo-grid figure, footer article {
+    width: 47%;
+    padding: 1em 1.5%;
+  }
+
+  footer article:nth-of-type(2n) {
+    float: right;
+  }
+
+  body {
+    margin: 0 2%;
+  }
+}
+
+@media (max-width: 800px) {
+  header {
+    flex-flow: column;
+  }
+
+  header h1, header nav {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .secondary {
+    flex-flow: column;
+  }
+  .photo-grid figure, footer article {
+    width: 96%;
+    padding: 1em 2%;
+  }
+}
+
+@keyframes init {
+  0% {
+    margin-top: 150%;
+  }
+  60% {
+    margin-top: -5%;
+  }
+  100% {
+    margin-top: 0%;
+  }
 }
